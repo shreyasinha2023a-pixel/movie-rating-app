@@ -5,16 +5,15 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t movie-rating-app .'
+                bat 'docker build -t movie-rating-app .'
             }
         }
 
         stage('Run Application') {
             steps {
-                sh 'docker run movie-rating-app'
+                bat 'docker run movie-rating-app'
             }
         }
     }
 }
-
 
