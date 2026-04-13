@@ -1,0 +1,4 @@
+FROM openjdk:17
+COPY MovieRating.java MovieRating.java
+RUN javac MovieRating.java
+CMD ["java", "MovieRating"]
